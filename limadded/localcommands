@@ -1,0 +1,23 @@
+local
+=====
+docker login silverline.jfrog.io
+docker pull hello-world
+docker tag hello-world silverline.jfrog.io/docker-dev-local/hello-world
+docker push silverline.jfrog.io/docker-dev-local/hello-world
+
+
+remote
+======
+docker login silverline.jfrog.io
+docker pull hello-world
+
+virtual
+======
+docker login silverline.jfrog.io
+docker pull hello-world
+docker tag hello-world silverline.jfrog.io/docker/hello-world
+docker push silverline.jfrog.io/docker/hello-world
+docker pull silverline.jfrog.io/docker/hello-world
+
+
+
